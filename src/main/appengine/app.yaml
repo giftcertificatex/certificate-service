@@ -5,3 +5,5 @@ service: certificate-service
 # Explicitly set the memory limit and maximum heap size for the Spring Boot app
 env_variables:
   JAVA_TOOL_OPTIONS: "-XX:MaxRAM=256m -XX:ActiveProcessorCount=2 -Xmx32m"
+
+entrypoint: java -jar certificate-service-0.1.jar
