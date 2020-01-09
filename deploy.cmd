@@ -1,0 +1,1 @@
+mvn clean package appengine:deploy -Dapp.deploy.projectId=single-outrider-260808
