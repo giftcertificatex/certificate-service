@@ -1,5 +1,6 @@
 package com.giftok.certificate.topic;
 
+import com.giftok.certificate.PropertiesHolder;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutureCallback;
 import com.google.api.core.ApiFutures;
@@ -13,8 +14,8 @@ import com.google.pubsub.v1.PubsubMessage;
 import java.util.concurrent.TimeUnit;
 
 public class CertificateCreatedPublisher {
-    private static final String PROJECT = "single-outrider-260808";
-    private static final String TOPIC = "certificate-created-topic";
+    private static final String PROJECT = PropertiesHolder.getProperty("google.app.engine.project-id");
+    private static final String TOPIC = PropertiesHolder.getProperty("google.app.engine.topic.certificate-created.id");
 
     public void publishMessage(ByteString data) throws Exception {
         ProjectTopicName topicName = ProjectTopicName.of(PROJECT, TOPIC);

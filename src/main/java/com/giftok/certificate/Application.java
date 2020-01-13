@@ -31,6 +31,5 @@ public class Application {
 
         CertificateCreationSubscriber subscriber = new CertificateCreationSubscriber();
         subscriber.await(receiver);
-
     }
 }
