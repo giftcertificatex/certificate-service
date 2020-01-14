@@ -1,10 +1,10 @@
 package com.giftok.certificate;
 
+import com.giftok.certificate.message.CertificateMessageOuterClass.CertificateMessage;
 import com.giftok.certificate.topic.CertificateCreatedPublisher;
 import com.giftok.certificate.topic.CertificateCreationSubscriber;
 import com.google.cloud.pubsub.v1.MessageReceiver;
 import com.google.protobuf.ByteString;
-import com.giftok.certificate.message.CertificateMessageOuterClass.CertificateMessage;
 
 public class Application {
     public static void main(String[] args) {

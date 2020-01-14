@@ -11,7 +11,7 @@ public class PropertiesHolder {
         try (InputStream is = PropertiesHolder.class.getClassLoader().getResourceAsStream(propFileName)) {
             properties.load(Objects.requireNonNull(is));
         } catch (Exception e) {
-            System.out.println("Exception: " + e);
+            e.printStackTrace();
         }
     }
 
